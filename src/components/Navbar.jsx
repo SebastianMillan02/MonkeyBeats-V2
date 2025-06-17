@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/LogoMB.png';
 import CartWidget from './CartWidget';
 
@@ -9,13 +10,13 @@ const Navbar = () => {
 
 	return (
 		<nav className="navbar">
-			<a href="/">
+			<Link href="/">
 				<img
 					src={logo}
 					alt="Logo Monkey Beats"
 					className="navbar__logo"
 				/>
-			</a>
+			</Link>
 
 			<button className="navbar__toggle" onClick={toggleMenu}>
 				<i className="bi bi-list"></i>
@@ -24,32 +25,35 @@ const Navbar = () => {
 			<div
 				className={`navbar__menu ${isOpen ? 'navbar__menu--open' : ''}`}
 			>
-				<a href="/" className="navbar__link">
+				<Link to="/" className="navbar__link">
 					Inicio
-				</a>
-				<a href="#" className="navbar__link">
-					Productos
-				</a>
-				<a href="#" className="navbar__link">
+				</Link>
+				<Link to="/categoria/hoodies" className="navbar__link">
+					Hoodies
+				</Link>
+				<Link to="/categoria/camisetas" className="navbar__link">
+					Camisetas
+				</Link>
+				<Link to="#" className="navbar__link">
 					Blog
-				</a>
-				<a href="#" className="navbar__link">
+				</Link>
+				<Link to="#" className="navbar__link">
 					Contacto
-				</a>
+				</Link>
 			</div>
 
 			<div className="navbar__icons d-flex align-items-center">
-				<a href="#" className="navbar__icon-link">
+				<Link href="#" className="navbar__icon-link">
 					<i className="bi bi-search navbar__icon"></i>
-				</a>
+				</Link>
 
-				<a href="#" className="navbar__icon-link">
+				<Link href="#" className="navbar__icon-link">
 					<CartWidget />
-				</a>
+				</Link>
 
-				<a href="#" className="navbar__icon-link">
+				<Link href="#" className="navbar__icon-link">
 					<i className="bi bi-person navbar__icon"></i>
-				</a>
+				</Link>
 			</div>
 		</nav>
 	);
