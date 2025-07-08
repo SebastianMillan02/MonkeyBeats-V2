@@ -1,0 +1,23 @@
+@use '../base/vars' as *;
+@use '../utilities/mixins' as *;
+
+.back-to-top-btn {
+  @include square(40px, 40px);
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  border: 2px solid $tone-950;
+  border-radius: 50px;
+  background-color: $tone-600;
+  transition: all 0.2s ease-in-out;
+
+  i {
+    font-size: larger;
+    color: $white;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}

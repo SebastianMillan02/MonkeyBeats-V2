@@ -1,0 +1,44 @@
+@use '../base/vars' as *;
+@use '../utilities/mixins' as *;
+
+.beneficios {
+  padding: 3.5em;
+  gap: 20px;
+  @include grid-repeat (4, 1fr, 2, auto);
+  justify-content: center;
+  align-items: baseline;
+  color: $white;
+
+  &__title {
+    grid-column: 1 / span 4;
+    margin-bottom: 2em;
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  &__item {
+    text-align: center;
+  }
+}
+
+.beneficio__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 1em auto;
+  background-color: $tone-200;
+  color: $tone-950;
+  border-radius: 100px;
+
+  i {
+    font-size: 2em;
+  }
+}
+
+.beneficio__title {
+  color: $white;
+  font-size: 1.4em;
+  font-weight: 500;
+}

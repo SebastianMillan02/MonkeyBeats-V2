@@ -1,0 +1,55 @@
+@use '../base/vars' as *;
+
+footer {
+  background-color: $tone-950;
+  color: $white;
+
+  //FOOTER PRINCIPAL
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $tone-500;
+    padding: 3rem;
+
+    &__logo {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      a {
+        img {
+          padding: 0.5em;
+          max-width: 250px;
+        }
+      }
+    }
+
+    &__main-menu .navbar__menu,
+    &__legal-menu .navbar__menu {
+      font-weight: 300;
+      list-style-type: none;
+      padding-left: 0;
+    }
+  }
+
+  //COPYRIGHT
+  .post-footer {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 6em;
+    justify-content: space-between;
+    border-top: 1px solid $tone-500;
+
+    &__social-icons {
+      display: flex;
+      gap: 5px;
+    }
+
+    &__social-icon {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use '../base/vars' as *;
+
+.pre-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $tone-500;
+  padding: 0.8em 2em;
+
+  &__social-icons {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__contact{
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-text {
+    margin-right: 15px;
+  }
+
+  &__social-icon,
+  &__contact-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 5px;
+  }
+
+  &__contact-number {
+    color: $dark-bg;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+
+    &:hover{
+        color: $tone-950;
+    }
+  }
+}
+

@@ -1,0 +1,51 @@
+@use '../base/vars' as *;
+
+//Mixin para Grid donde sus columnas y filas se generan con repeat()
+@mixin grid-repeat($columns, $column-width, $rows, $row-height) {
+  display: grid;
+  grid-template-columns: repeat($columns, $column-width);
+  grid-template-rows: repeat($rows, $row-height);
+}
+
+//Mixin para facilitar la configuración de los Hero Section en las páginas internas
+@mixin hero-interna($img) {
+  background-image: url($img),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  background-position: center;
+  background-blend-mode: overlay;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+//Mixin para definir la configuración de los títulos de los Hero Section de las páginas internas que necesitan una configuración de posición en el eje y
+@mixin hero-interna-y($img, $bg-position-y) {
+  background-image: url($img),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  background-position-y: $bg-position-y;
+  background-blend-mode: overlay;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+@mixin title-hero {
+  h1 {
+    font-size: 6em;
+    font-weight: 600;
+    color: $white;
+  }
+}
+
+//Mixin para generar un cuadrado con sus elementos justificados y alineados al centro
+@mixin square ($width, $height){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+}

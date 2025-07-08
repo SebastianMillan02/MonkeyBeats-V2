@@ -1,0 +1,19 @@
+@use '../base/vars' as *;
+
+.hero__button--primary,
+.horizontal-form__button--submit,
+.producto-individual__button--primary {
+  background-color: $primary-color;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+  border-radius: 50px;
+  color: $tone-950;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    background-color: $tone-500;
+    transform: scale(1.05);
+  }
+}
