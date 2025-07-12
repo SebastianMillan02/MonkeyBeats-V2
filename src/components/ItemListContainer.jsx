@@ -26,7 +26,7 @@ const ItemListContainer = () => {
 			});
 	}, []);
 
-	if (loading) return <p className="loading">Cargando productos...</p>;
+	if (loading) return <p style={{ textAlign: "center", color: "white" }} className="loading">Cargando productos...</p>;
 
 	return (
 		<section className="tienda__productos">

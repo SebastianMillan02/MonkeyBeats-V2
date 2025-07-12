@@ -18,7 +18,7 @@ const Item = ({ id, nombre, img, precio }) => {
 				</div>
 
 				<div className="producto__info__button">
-					<Link to={`/item/${id}`}>
+					<Link to={`/producto/${id}`}>
 						<i className="bi bi-cart-plus"></i>
 					</Link>
 				</div>
