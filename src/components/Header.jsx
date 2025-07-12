@@ -11,7 +11,7 @@ const Header = () => {
 	return (
 		<header>
 			{/* Pre-header */}
-			<div className="pre-header">
+			<div className="pre-header" id="pre-header">
 				<div className="pre-header__social-icons">
 					<p className="pre-header__social-text">Síguenos</p>
 					<a
@@ -99,11 +99,11 @@ const Header = () => {
 						Inicio
 					</NavLink>
 					<NavLink
-						to="/categoria/accesorios"
+						to="/productos"
 						className="navbar__link"
 						onClick={handleLinkClick}
 					>
-						Accesorios
+						Productos
 					</NavLink>
 					<NavLink
 						to="/categoria/vintage"

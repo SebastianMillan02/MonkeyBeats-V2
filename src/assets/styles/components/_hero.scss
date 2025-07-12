@@ -1,0 +1,18 @@
+@use '../base/vars' as *;
+
+.hero-interna {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__title {
+    font-size: 6em;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+  }
+}

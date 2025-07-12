@@ -10,9 +10,10 @@
   border-radius: 50px;
   background-color: $tone-600;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   i {
-    font-size: larger;
+    font-size: 1.2em;
     color: $white;
   }
 

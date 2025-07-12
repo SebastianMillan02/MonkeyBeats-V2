@@ -3,171 +3,180 @@
 
 //HERO
 .hero-productos {
-  @include hero-interna-y("../images/banner-productos.jpg", 15%);
-  @include title-hero;
+	@include hero-interna-y('../images/banner-productos.jpg', 15%);
+	@include title-hero;
 }
 
 //MAIN
 .tienda {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr;
-  color: $white;
-  padding: 3em;
-  column-gap: 30px;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr;
+	color: $white;
+	padding: 3em;
+	column-gap: 30px;
 
-  //SIDEBAR
-  &__sidebar {
-    padding: 0 1em;
-    color: $white;
-    margin-right: 1em;
+	//SIDEBAR
+	&__sidebar {
+		padding: 0 1em;
+		color: $white;
+		margin-right: 1em;
 
-    .accordion-flush {
-      border: none;
-    }
+		.accordion-flush {
+			border: none;
+		}
 
-    .accordion-flush .accordion-item {
-      border: none;
-      background-color: transparent;
-      color: $white;
-      font-size: 0.8em;
-      padding: 0.5em 0;
-    }
+		.accordion-flush .accordion-item {
+			border: none;
+			background-color: transparent;
+			color: $white;
+			font-size: 0.8em;
+			padding: 0.5em 0;
+		}
 
-    .accordion-button {
-      background-color: transparent;
-      color: $white;
-      font-size: 0.8em;
-      padding: 0.5em 0;
+		.accordion-button {
+			background-color: transparent;
+			color: $white;
+			font-size: 0.8em;
+			padding: 0.5em 0;
 
-      &::after,
-      &:not(.collapsed)::after {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
-      }
+			&::after,
+			&:not(.collapsed)::after {
+				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+			}
 
-      &:not(.collapsed) {
-        color: $white;
-        background-color: transparent;
-        box-shadow: none;
-      }
+			&:not(.collapsed) {
+				color: $white;
+				background-color: transparent;
+				box-shadow: none;
+			}
 
-      &:focus {
-        box-shadow: none;
-      }
-    }
+			&:focus {
+				box-shadow: none;
+			}
+		}
 
-    .accordion-body {
-      padding: 0;
-      font-weight: 200;
-      font-size: 1.3em;
+		.accordion-body {
+			padding: 0;
+			font-weight: 200;
+			font-size: 1.3em;
 
-      .list-group-item {
-        line-height: 2em;
+			.list-group-item {
+				line-height: 2em;
 
-        a {
-          text-decoration: none;
-          color: $white;
-          font-size: 1.1em;
+				a {
+					text-decoration: none;
+					color: $white;
+					font-size: 1.1em;
 
-          &:hover {
-            color: $tone-200;
+					&:hover {
+						color: $tone-200;
+					}
+				}
+			}
+		}
+
+		input[type='range']::-webkit-slider-runnable-track {
+			height: 5px;
+			background: $tone-100;
+			border-radius: 20px;
+		}
+
+		input[type='range']::-webkit-slider-thumb,
+		input[type='range']::-webkit-slider-thumb:active {
+			width: 15px;
+			height: 15px;
+			background: $primary-color;
+			border-radius: 50%;
+			cursor: pointer;
+			box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+		}
+
+		.btn-outline-primary,
+		.btn-outline-primary:hover,
+		.btn-outline-primary:focus-visible {
+			color: $white !important;
+			border-color: $white !important;
+			margin-bottom: 0.8em;
+			font-weight: 200;
+		}
+
+		.btn-check:checked + .btn,
+		.btn.active,
+		.btn.show,
+		.btn:first-child:active,
+		:not(.btn-check) + .btn:active {
+			border: none;
+			background-color: $tone-500;
+		}
+	}
+
+	//LISTING PRODUCTOS
+	&__productos {
+		@include grid-repeat(3, 1fr, 2, 1fr);
+		gap: 50px;
+		padding: 1em;
+		max-width: 1200px;
+		margin: 20px auto;
+
+		.producto {
+			&__image {
+				img {
+					width: 100%;
+					border-radius: 25px;
+					margin-bottom: 1.3em;
+				}
+			}
+
+			&__info {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				&__text {
+					width: 75%;
+					color: $white;
+
+					&--title {
+						font-size: 1.5em;
+						font-weight: bold;
+					}
+
+					&--price {
+						font-size: 1.3em;
+						font-weight: 200;
+					}
+				}
+
+				&__button {
+					width: 25%;
+					display: flex;
+					flex-direction: column;
+					align-items: end;
+
+          a{
+            text-decoration: none;
           }
-        }
-      }
-    }
 
-    input[type="range"]::-webkit-slider-runnable-track {
-      height: 5px;
-      background: $tone-100;
-      border-radius: 20px;
-    }
-
-    input[type="range"]::-webkit-slider-thumb,
-    input[type="range"]::-webkit-slider-thumb:active {
-      width: 15px;
-      height: 15px;
-      background: $primary-color;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .btn-outline-primary,
-    .btn-outline-primary:hover,
-    .btn-outline-primary:focus-visible {
-      color: $white !important;
-      border-color: $white !important;
-      margin-bottom: 0.8em;
-      font-weight: 200;
-    }
-
-    .btn-check:checked + .btn,
-    .btn.active,
-    .btn.show,
-    .btn:first-child:active,
-    :not(.btn-check) + .btn:active {
-      border: none;
-      background-color: $tone-500;
-    }
-  }
-
-  //LISTING PRODUCTOS
-  &__productos {
-    @include grid-repeat(3, 1fr, 2, 1fr);
-    gap: 50px;
-    padding: 1em;
-
-    .producto {
-      &__image {
-        img {
-          width: 100%;
-          border-radius: 25px;
-          margin-bottom: 1.3em;
-        }
-      }
-
-      &__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__text {
-          width: 75%;
-
-          &--title {
+					i {
+						background-color: $primary-color;
+						width: 50px;
+						height: 50px;
+						color: $tone-950;
+						text-align: center;
+						border-radius: 100%;
+						transition: all 0.3s ease-in-out;
             font-size: 1.5em;
-            font-weight: bold;
-          }
+						display: flex;
+						align-items: center;
+						justify-content: center;
 
-          &--price {
-            font-size: 1.3em;
-            font-weight: 200;
-          }
-        }
-
-        &__button {
-          width: 25%;
-          display: flex;
-          flex-direction: column;
-          align-items: end;
-
-          i {
-            background-color: $primary-color;
-            width: 50px;
-            height: 50px;
-            color: $tone-950;
-            padding-top: 0.35em;
-            text-align: center;
-            border-radius: 100%;
-            font-size: 1.5em;
-            transition: all 0.3s ease-in-out;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
-        }
-      }
-    }
-  }
+						&:hover {
+							transform: scale(1.1);
+						}
+					}
+				}
+			}
+		}
+	}
 }
