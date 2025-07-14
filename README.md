@@ -1,12 +1,48 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Logo](https://raw.githubusercontent.com/SebastianMillan02/monkey-beats/main/images/Monkey-Beats-Logo-Horizontal.png)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Monkey Beats
 
-## Expanding the ESLint configuration
+**Monkey Beats** es una tienda online de moda con propósito, desarrollada como proyecto final del curso de React JS de Coderhouse. Este eCommerce no solo ofrece camisetas y sudaderas con diseños únicos de monos, sino que también está comprometido con causas sociales, combinando estilo, conciencia y tecnología.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tecnologías y herramientas utilizadas
+
+- **React JS** – SPA con React Router Dom y Context API.
+- **Firebase** – Base de datos Firestore para gestión de productos y pedidos.
+- **SCSS (SASS)** – Estilos organizados con metodología BEM.
+- **SweetAlert2** – Notificaciones personalizadas y confirmaciones interactivas.
+- **Vite** – Empaquetador moderno para desarrollo rápido.
+- **Vercel** – Hosting y despliegue continuo.
+- **GitHub** – Control de versiones y colaboración.
+
+---
+
+## ⚙️ Funcionalidades principales
+
+- 🛍️ Visualización de productos desde Firebase.
+- 🔍 Filtros por categorías y detalles individuales de cada producto.
+- 🛒 Carrito de compras con contador dinámico, control de cantidades.
+- ✅ Confirmaciones para vaciar o eliminar productos del carrito con SweetAlert2.
+- 💬 Notificaciones al agregar productos al carrito.
+- 🎉 Página de agradecimiento post-compra.
+
+---
+
+## Sobre Monkey Beats
+
+Imagina vestir tus días con camisetas, sudaderas y accesorios que no solo marcan tendencia, sino que también marcan una diferencia significativa. Desde diseños divertidos y alegres hasta mensajes poderosos que resaltan la importancia de la conservación y el bienestar animal, cada artículo está cuidadosamente elaborado para ofrecerte calidad y estilo, mientras contribuyes a una causa noble.
+
+Explora nuestra colección y únete a la revolución de la moda con propósito. Porque vestir bien es importante, ¡pero hacerlo mientras ayudas a quienes más lo necesitan es aún mejor! 🌍
+
+
+## Visita el eCommerce
+
+- Vercel - https://monkey-beats-v2.vercel.app/
+
+
+## Autor
+
+- [Sebastián Millán Higuita](https://github.com/SebastianMillan02)
