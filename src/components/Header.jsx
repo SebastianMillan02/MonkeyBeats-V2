@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import CartWidget from './CartWidget';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -130,7 +131,7 @@ const Header = () => {
 
 				<div className="navbar__icons">
 					<Link
-						to="/busqueda"
+						to="/"
 						className="navbar__icon-link"
 						onClick={handleLinkClick}
 					>
@@ -140,19 +141,9 @@ const Header = () => {
 							className="navbar__icon"
 						/>
 					</Link>
+					<CartWidget/>
 					<Link
-						to="/carrito"
-						className="navbar__icon-link"
-						onClick={handleLinkClick}
-					>
-						<img
-							src="/images/icons/bag.svg"
-							alt="Carrito"
-							className="navbar__icon"
-						/>
-					</Link>
-					<Link
-						to="/login"
+						to="/"
 						className="navbar__icon-link"
 						onClick={handleLinkClick}
 					>

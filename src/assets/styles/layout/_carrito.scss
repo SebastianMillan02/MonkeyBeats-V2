@@ -1,0 +1,69 @@
+@use '../base/vars' as *;
+
+.carrito {
+
+    &-info{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3em;
+        color: $white;
+    }
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	&__item {
+		display: flex;
+		gap: 1.5em;
+		border-bottom: 1px solid $tone-200;
+		padding-bottom: 1em;
+
+		&-img {
+			width: 200px;
+			border-radius: 20px;
+		}
+
+		&-info {
+            font-size: x-large;
+			color: $white;
+
+            button{
+                color: $tone-800;
+                font-size: 20px;
+            }
+		}
+	}
+
+	&__resumen {
+		margin-top: 2em;
+		color: $white;
+        font-size: 1.5em;
+
+		h3 {
+			margin-bottom: 0.5em;
+		}
+
+		.carrito__acciones {
+			margin-top: 1em;
+			display: flex;
+			gap: 1em;
+            font-size: 0.6em;
+
+            :first-child{
+                color: $tone-800;
+            }
+		}
+	}
+
+    &-vacio__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        padding: 3em;
+        color: $white;
+    }
+}

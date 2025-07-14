@@ -89,7 +89,7 @@ const Footer = () => {
 			{/* Post Footer */}
 			<div className="post-footer">
 				<p className="post-footer__copyright">
-					Copyright 2024 | Todos los derechos reservados.
+					Copyright 2025 | Sebastián Millán Higuita | Todos los derechos reservados.
 				</p>
 				<div className="post-footer__social-icons">
 					<a

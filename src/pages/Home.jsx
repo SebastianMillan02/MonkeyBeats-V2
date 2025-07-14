@@ -20,7 +20,7 @@ const Home = () => {
 						las calles con estilo!
 					</p>
 					<div className="hero__info-buttons">
-						<Link to="/" className="hero__button--primary">
+						<Link to="/productos" className="hero__button--primary">
 							Comprar ahora
 						</Link>
 						<Link to="/" className="hero__button--secondary">

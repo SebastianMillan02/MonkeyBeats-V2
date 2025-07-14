@@ -15,6 +15,7 @@
 @use "components/header";
 @use "components/pre-header";
 @use "components/hero";
+@use "components/notification";
 
 //LAYOUT
 @use "layout/index";
@@ -22,4 +23,6 @@
 @use "layout/producto-individual";
 @use "layout/blog";
 @use "layout/contacto";
+@use "layout/carrito";
+@use "layout/checkout";
 @use "layout/mediaqueries";

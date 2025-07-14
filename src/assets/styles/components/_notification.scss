@@ -1,0 +1,30 @@
+@use '../base/vars' as *;
+
+.mi-toast {
+	background-color: #121212 !important;
+	color: #ffffff;
+	border-radius: 12px;
+	padding: 1em 1.5em;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-family: $main-font;
+
+	&-title {
+		color: #f4c542;
+		font-weight: 500;
+        font-size: 20px !important;
+        margin-bottom: -5px !important;
+	}
+
+	&-text {
+		color: #ddd;
+	}
+
+	&-icon {
+		color: $tone-600 !important;
+	}
+
+    button{
+        font-family: $main-font;
+        font-weight: 400;
+    }
+}
